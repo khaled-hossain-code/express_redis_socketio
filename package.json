@@ -14,7 +14,8 @@
     "bluebird": "3.5.3",
     "dotenv": "6.2.0",
     "express": "4.16.4",
-    "ioredis": "4.6.2"
+    "ioredis": "4.6.2",
+    "socket.io": "2.2.0"
   },
   "devDependencies": {
     "nodemon": "1.18.9"
