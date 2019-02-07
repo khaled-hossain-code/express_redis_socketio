@@ -1,7 +1,7 @@
 const redis = require('./config/redis');
 
-const storeUser = (socketID, user) => {
-  redis.set(socketID, user)
+const storeUser = (socket, user) => {
+  redis.set(socket.id, user)
 }
 
 const getUser = (socketID) => {

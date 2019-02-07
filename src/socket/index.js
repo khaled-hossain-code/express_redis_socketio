@@ -1,4 +1,9 @@
-const {onHi} = require('./handleGreetings');
+const {
+  onHi
+} = require('./handleGreetings');
+const {
+  verifyUser
+} = require('../controllers/user.controller');
 
 const errorEmit = (socket) => {
   return (err) => {
@@ -9,6 +14,9 @@ const errorEmit = (socket) => {
 
 const registerEvents = (socket) => {
   socket.on('hi', onHi);
+  socket.on('token', (data) => {
+    verifyUser(socket, data.token);
+  })
 }
 
 module.exports = {
