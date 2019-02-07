@@ -75,6 +75,7 @@ io.on('connection', function (socket) {
   registerEvents(socket);
 
   socket.on('disconnect', function (socket) {
+    //remove user from redis
     console.log('one socket got disconnected');
   })
 });
